@@ -1,3 +1,3 @@
-Movie Rental project in JavaScript.
+The Best Movies project in JavaScript.
 
 Used IDE: VSC.

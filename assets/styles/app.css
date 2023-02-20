@@ -24,6 +24,14 @@ header {
   font-size: 18px;
 }
 
+nav {
+  text-align: center;
+}
+
+a {
+  color: rgb(216, 213, 227);
+}
+
 .card {
   background-color: rgb(238, 238, 241);
   padding-top: 10px;
@@ -145,4 +153,3 @@ input {
 .movie-item h2 {
   margin: 1rem 0 1rem 0;
 }
-

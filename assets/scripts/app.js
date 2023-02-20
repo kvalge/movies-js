@@ -32,15 +32,15 @@ class MovieList {
     new Movie(
       'LOST IN TRANSLATION',
       'https://images.squarespace-cdn.com/content/v1/5a59a10d4c326de87b455acd/1535389898147-UZ4KFUQEP0S5DRWL8NUG/Charlotte-Bob-lost-in-translation-1041685_1400_930.jpg?format=2500w',
-      'A 2003 romantic comedy-drama film written and directed by Sofia Coppola. Bob Harris, a fading American' +
-        'movie star who is having a midlife crisis when he travels to Tokyo to promote Suntory whisky. There, he' +
-        'befriends another estranged American named Charlotte, a young woman and recent college graduate played.' +
+      'A 2003 romantic comedy-drama film written and directed by Sofia Coppola. Bob Harris, a fading American ' +
+        'movie star who is having a midlife crisis when he travels to Tokyo to promote Suntory whisky. There, he ' +
+        'befriends another estranged American named Charlotte, a young woman and recent college graduate.' +
         'The film explores themes of alienation and disconnection against a backdrop of cultural displacement in Japan.'
     ),
     new Movie(
       'ANOTHER ROUND',
       'http://www.camera-roll.com/wp-content/uploads/2021/04/anotherround02.jpg',
-      'A 2020 black comedy-drama film directed by Thomas Vinterberg. Teachers Martin, Tommy, Peter, and Nikolaj' +
+      'A 2020 black comedy-drama film directed by Thomas Vinterberg. Teachers Martin, Tommy, Peter, and Nikolaj ' +
         'struggle with unmotivated students and feel that their lives have become boring and stale. At a dinner ' +
         "celebrating Nikolaj's 40th birthday, the group begins to discuss the theory of psychiatrist Finn Skårderud" +
         ' — that humans are born with a blood alcohol content (BAC) deficiency of 0.05%, and that being at 0.05% ' +

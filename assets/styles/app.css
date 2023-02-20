@@ -14,22 +14,21 @@ body {
 
 header {
   max-width: 100%;
-  padding: 2rem;
   height: 150px;
   background-color: navy;
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
   font-size: 18px;
-}
-
-nav {
-  text-align: center;
 }
 
 a {
   color: rgb(216, 213, 227);
+  text-align: center;
+}
+
+ul li {
+  list-style-type: none;
 }
 
 .card {
@@ -68,16 +67,15 @@ img {
 button {
   font: inherit;
   height: 35px;
+  width: 120px;
   margin-top: 20px;
+  margin-left: 15px;
   border: 1px solid #810036;
   color: white;
   border-radius: 4px;
   background: #810036;
   text-align: center;
   cursor: pointer;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 button:hover {

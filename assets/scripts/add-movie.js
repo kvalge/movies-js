@@ -1,15 +1,3 @@
-/* class Movie {
-  title;
-  image;
-  description;
-
-  constructor(title, image, description) {
-    this.title = title;
-    this.image = image;
-    this.description = description;
-  }
-} */
-
 const movies = [];
 
 const addMovieBtn = document.getElementById('add-movie-btn');
@@ -26,8 +14,16 @@ const renderMovies = () => {
 
   movies.forEach((movie) => {
     const movieEl = document.createElement('li');
-    let text = movie.name + '\n: ' + movie.description;
-    movieEl.textContent = text;
+    movieEl.className = 'movie-item';
+    movieEl.innerHTML = `
+    <div>
+    <img src="${movie.image}" alt="${movie.name}">
+    <div>
+    <h2>${movie.name.toUpperCase()}</h2>
+    <p>${movie.description}</p>
+    </div>
+    </div>
+    `;
     movieList.append(movieEl);
   });
 };

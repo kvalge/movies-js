@@ -13,6 +13,7 @@
     "rules": {
         "quotes": ["error", "single"],
         "semi":"off",
-        "comma-dangle":"off"
+        "comma-dangle":"off",
+        "space-before-function-paren": "off"
     }
 }

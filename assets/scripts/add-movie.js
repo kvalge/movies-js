@@ -38,9 +38,9 @@ const addMovieHandler = () => {
   }
 
   const newMovie = {
-    name: name,
-    description: description,
-    image: image,
+    name,
+    description,
+    image,
     id: Math.random(),
   };
 

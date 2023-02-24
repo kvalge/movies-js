@@ -46,6 +46,15 @@ const addMovieHandler = () => {
 
   movies.push(newMovie);
   renderMovies();
+  clearMovieInput();
+};
+
+const addMovie = document.getElementById('user-input');
+const userInputs = addMovie.querySelectorAll('input');
+clearMovieInput = () => {
+  for (const usrInput of userInputs) {
+    usrInput.value = '';
+  }
 };
 
 addMovieBtn.addEventListener('click', addMovieHandler);

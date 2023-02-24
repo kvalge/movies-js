@@ -57,11 +57,11 @@ class MovieList {
     ),
     new Movie(
       'SPY GAME',
-      'https://th.bing.com/th/id/OIP.V0KWrZCqldLr9qjIJ-u67wHaD4?pid=ImgDet&rs=1',
+      'https://cdn.gelestatic.it/kataweb/tvzap/2018/07/Spy-Game-5_1000.jpg',
       'A 2001 American action thriller film directed by Tony Scott. In 1991, the United States and China are ' +
         'close to a major trade agreement. The Central Intelligence Agency (CIA) learns that its asset Tom Bishop ' +
         "has been arrested at a People's Liberation Army prison in Suzhou and will be executed in 24 hours, unless " +
-        "the U.S. government claims him and bargains for his release. Bishop's actions, unsanctioned by the CIA, " +
+        "the U.S. government claims him and bargains for his release. Bishop/'s actions, unsanctioned by the CIA, " +
         "risk jeopardizing the agreement. Nathan D. Muir, a veteran case officer and Bishop's mentor, who plans to " +
         'retire from the Agency at the end of the day, recalls his training of Tom Bishop while working against ' +
         'agency politics to free him from his Chinese captors.'
@@ -85,3 +85,4 @@ class MovieList {
 
 const movieList = new MovieList();
 movieList.render();
+console.log('Hello');

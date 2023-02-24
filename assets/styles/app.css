@@ -103,6 +103,7 @@ input {
   height: 30px;
   width: 360px;
   margin-left: 50px;
+  padding-top: 10px;
 }
 
 #user-input{
@@ -125,17 +126,17 @@ text-align: center;
   display: block;
 }
 
-.head-el{
+.link-el{
   display: none;
 }
 
-.head-el.visible{
+.link-el.visible{
   display: block;
 }
 
-.head-el {
+.link-el {
   background-color: rgb(238, 238, 241);
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
   border-radius: 3px;
   margin-bottom: 2px;

@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-constructor */
 class Movie {
   constructor(name, image, description) {
     this.name = name;
@@ -85,4 +84,3 @@ class MovieList {
 
 const movieList = new MovieList();
 movieList.render();
-console.log('Hello');

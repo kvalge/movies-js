@@ -17,7 +17,6 @@ header {
   height: 150px;
   background-color: navy;
   color: white;
-  margin-bottom: 5px;
   border-radius: 3px;
 }
 
@@ -124,6 +123,23 @@ text-align: center;
 
 #movie-list.visible {
   display: block;
+}
+
+.head-el{
+  display: none;
+}
+
+.head-el.visible{
+  display: block;
+}
+
+.head-el {
+  background-color: rgb(238, 238, 241);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  margin-top: 2px;
 }
 
 #movie-list li {

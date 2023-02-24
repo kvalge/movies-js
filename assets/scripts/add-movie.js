@@ -47,6 +47,7 @@ const addMovieHandler = () => {
   movies.push(newMovie);
   renderMovies();
   clearMovieInput();
+  toggleHead();
 };
 
 const addMovie = document.getElementById('user-input');
@@ -56,5 +57,10 @@ clearMovieInput = () => {
     usrInput.value = '';
   }
 };
+
+const getHeadEl = document.getElementById('head-el');
+  toggleHead = () => {
+    getHeadEl.classList.toggle('visible');
+  };
 
 addMovieBtn.addEventListener('click', addMovieHandler);

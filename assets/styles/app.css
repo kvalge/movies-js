@@ -108,8 +108,8 @@ input {
   padding-top: 10px;
 }
 
-#user-input{
-text-align: center;
+#user-input {
+  text-align: center;
 }
 
 #movie-list {
@@ -128,13 +128,13 @@ text-align: center;
   display: block;
 }
 
-.link-el{
+/* .link-el {
   display: none;
 }
 
-.link-el.visible{
+.link-el.visible {
   display: block;
-}
+} */
 
 .link-el {
   background-color: rgb(238, 238, 241);
@@ -180,4 +180,12 @@ text-align: center;
 
 .movie-item h2 {
   margin: 1rem 0 1rem 0;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
 }

@@ -5,9 +5,8 @@ const cancelMovieBtn = document.getElementById('cancel-movie-btn');
 const hideCard = document.getElementById('hide');
 const hideCardStyle = (hideCard.style.display = 'none');
 
-/* const getLinkEl = document.getElementById('link-el');
-const hideLinkEl = (getLinkEl.style.display = 'none');
-hideLinkEl = getLinkEl.style.display = 'block'; */
+const getLinkEl = document.getElementById('link-el');
+getLinkEl.className = 'invisible';
 
 const renderMovies = () => {
   const movieList = document.getElementById('movie-list');
@@ -40,6 +39,19 @@ const renderMovies = () => {
   });
 };
 
+const deleteMovie = (movieId) => {
+  let movieIndex = 0;
+  for (const movie of movies) {
+    if (movie.id === movieId) {
+      break;
+    }
+    movieIndex++;
+  }
+  movies.splice(movieIndex, 1);
+  const movieList = document.getElementById('movie-list');
+  movieList.children[movieIndex].remove();
+};
+
 const addMovieHandler = () => {
   const name = document.getElementById('name').value;
   const description = document.getElementById('description').value;
@@ -55,14 +67,13 @@ const addMovieHandler = () => {
     name,
     description,
     image,
-    id: Math.random(),
   };
 
   movies.push(newMovie);
   renderMovies();
   clearMovieInput();
-  toggleLink();
 
+  getLinkEl.className = 'visible';
   hideCardStyle = hideCard.style.display = 'block';
 };
 
@@ -74,23 +85,6 @@ clearMovieInput = () => {
   }
 };
 
-const getLinkEl = document.getElementById('link-el');
-toggleLink = () => {
-  getLinkEl.classList.toggle('visible');
-};
-
 addMovieBtn.addEventListener('click', addMovieHandler);
 cancelMovieBtn.addEventListener('click', clearMovieInput);
 
-const deleteMovie = (movieId) => {
-  let movieIndex = 0;
-  for (const movie of movies) {
-    if (movie.id === movieId) {
-      break;
-    }
-    movieIndex++;
-  }
-  movies.splice(movieIndex, 1);
-  const movieList = document.getElementById('movie-list');
-  movieList.children[movieIndex].remove();
-};

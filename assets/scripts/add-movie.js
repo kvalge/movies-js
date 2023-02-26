@@ -2,8 +2,9 @@ const movies = [];
 
 const addMovieBtn = document.getElementById('add-movie-btn');
 const cancelMovieBtn = document.getElementById('cancel-movie-btn');
+
 const hideCard = document.getElementById('hide');
-const hideCardStyle = (hideCard.style.display = 'none');
+hideCard.style.display = 'none';
 
 const getLinkEl = document.getElementById('link-el');
 getLinkEl.className = 'invisible';
@@ -74,7 +75,7 @@ const addMovieHandler = () => {
   clearMovieInput();
 
   getLinkEl.className = 'visible';
-  hideCardStyle = hideCard.style.display = 'block';
+  hideCard.style.display = 'block';
 };
 
 const addMovie = document.getElementById('user-input');

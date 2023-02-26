@@ -2,8 +2,12 @@ const movies = [];
 
 const addMovieBtn = document.getElementById('add-movie-btn');
 const cancelMovieBtn = document.getElementById('cancel-movie-btn');
-const hide = document.getElementById('hide');
-const hideStyle = hide.style.display = 'none';
+const hideCard = document.getElementById('hide');
+const hideCardStyle = (hideCard.style.display = 'none');
+
+/* const getLinkEl = document.getElementById('link-el');
+const hideLinkEl = (getLinkEl.style.display = 'none');
+hideLinkEl = getLinkEl.style.display = 'block'; */
 
 const renderMovies = () => {
   const movieList = document.getElementById('movie-list');
@@ -27,6 +31,9 @@ const renderMovies = () => {
     <p>${movie.description}</p>
     </div>
     </div>
+    <div>
+  <button id="delete-movie-btn">Delete</button>
+</div>
     `;
     movieList.append(movieEl);
   });
@@ -53,8 +60,8 @@ const addMovieHandler = () => {
   renderMovies();
   clearMovieInput();
   toggleLink();
-  
-  hideStyle = hide.style.display = 'block'
+
+  hideCardStyle = hideCard.style.display = 'block';
 };
 
 const addMovie = document.getElementById('user-input');

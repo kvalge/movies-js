@@ -1,7 +1,7 @@
-const movies = [];
-
 const addMovieBtn = document.getElementById('add-movie-btn');
 const cancelMovieBtn = document.getElementById('cancel-movie-btn');
+
+const movieList = document.getElementById('movie-list');
 
 const hideCard = document.getElementById('hide');
 hideCard.style.display = 'none';
@@ -9,9 +9,12 @@ hideCard.style.display = 'none';
 const getLinkEl = document.getElementById('link-el');
 getLinkEl.className = 'invisible';
 
-const renderMovies = () => {
-  const movieList = document.getElementById('movie-list');
+const deleteMovieConfirmation = document.getElementById('delete-confirmation');
+deleteMovieConfirmation.className = 'invisible'
 
+const movies = [];
+
+const renderMovies = () => {
   if (movies.length === 0) {
     movieList.classList.remove('visible');
     return;
@@ -35,11 +38,15 @@ const renderMovies = () => {
   <button id="delete-movie-btn">Delete</button>
 </div>
     `;
-    
+
     const deleteMovieBtn = movieEl.querySelector('button');
     deleteMovieBtn.style.fontWeight = '100';
     deleteMovieBtn.style.fontSize = '14px';
-    deleteMovieBtn.addEventListener('click', deleteMovie.bind(null, movie.id));
+    // deleteMovieBtn.addEventListener('click', deleteMovie.bind(null, movie.id));
+    deleteMovieBtn.addEventListener(
+      'click',
+      startDeleteMovie.bind(null, movie.id)
+    );
 
     movieList.append(movieEl);
   });
@@ -54,8 +61,35 @@ const deleteMovie = (movieId) => {
     movieIndex++;
   }
   movies.splice(movieIndex, 1);
-  const movieList = document.getElementById('movie-list');
   movieList.children[movieIndex].remove();
+  closeMovieDeletionCard();
+};
+
+const closeMovieDeletionCard = () => {
+  deleteMovieConfirmation.className = 'invisible';
+  getLinkEl.className = 'visible';
+  hideCard.style.display = 'block';
+};
+
+const startDeleteMovie = movieId => {
+  deleteMovieConfirmation.className = 'visible';
+  hideCard.style.display = 'none';
+  getLinkEl.className = 'invisible';
+
+  const cancelDeletionButton = deleteMovieConfirmation.querySelector('.btn--passive');
+  let confirmDeletionButton = deleteMovieConfirmation.querySelector('.btn--danger');
+
+  confirmDeletionButton.replaceWith(confirmDeletionButton.cloneNode(true));
+
+  confirmDeletionButton = deleteMovieConfirmation.querySelector('.btn--danger');
+    
+  cancelDeletionButton.removeEventListener('click', closeMovieDeletionCard);
+
+  cancelDeletionButton.addEventListener('click', closeMovieDeletionCard);
+  confirmDeletionButton.addEventListener(
+    'click',
+    deleteMovie.bind(null, movieId)
+  );
 };
 
 const addMovieHandler = () => {
@@ -85,7 +119,8 @@ const addMovieHandler = () => {
 
 const addMovie = document.getElementById('user-input');
 const userInputs = addMovie.querySelectorAll('input');
-clearMovieInput = () => {
+
+const clearMovieInput = () => {
   for (const userInput of userInputs) {
     userInput.value = '';
   }

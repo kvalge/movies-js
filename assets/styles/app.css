@@ -86,6 +86,10 @@ button:hover {
   border: rgb(238, 238, 241);
 }
 
+#cancel-movie-btn:hover {
+  background:  rgb(208, 208, 215);;
+}
+
 label {
   font-size: 15px;
   font-weight: bold;

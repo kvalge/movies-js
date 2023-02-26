@@ -31,7 +31,7 @@ a {
   color: rgb(88, 87, 91);
   display: flex;
   justify-content: center;
-  padding-right: 10px;
+  padding-top: 20px;
   font-size: 15px;
   font-weight: bold;
 }
@@ -43,18 +43,6 @@ a {
   border-radius: 3px;
   margin-bottom: 2px;
   margin-top: 2px;
-}
-
-.sub-card {
-  color: navy;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  width: 70%;
 }
 
 p {
@@ -76,8 +64,8 @@ button {
   height: 30px;
   width: 90px;
   margin-top: 20px;
-  margin-bottom: 10px;
   margin-left: 15px;
+  margin-bottom: 10px;
   border: 1px solid #810036;
   color: white;
   border-radius: 4px;
@@ -102,14 +90,18 @@ label {
 
 input {
   font-size: 13px;
+  border-width: 0.1px;
+  border-color: rgb(239, 239, 244);
   height: 30px;
   width: 360px;
   margin-left: 50px;
-  padding-top: 10px;
+  margin-top: 5px;
 }
 
 #user-input {
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 #movie-list {
@@ -171,4 +163,8 @@ input {
 
 .invisible {
   display: none;
+}
+
+#link-el {
+  padding-bottom: 30px;
 }

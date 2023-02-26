@@ -34,6 +34,7 @@ const addMovieHandler = () => {
   const image = document.getElementById('image').value;
 
   if (name.trim() === '' || description.trim() === '' || image.trim() === '') {
+    alert('Please enter valid values!');
     return;
   }
 
@@ -60,7 +61,7 @@ clearMovieInput = () => {
 
 const getLinkEl = document.getElementById('link-el');
 toggleLink = () => {
-    getLinkEl.classList.toggle('visible');
-  };
+  getLinkEl.classList.toggle('visible');
+};
 
 addMovieBtn.addEventListener('click', addMovieHandler);

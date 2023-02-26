@@ -72,8 +72,9 @@ img {
 
 button {
   font: inherit;
+  font-size: 14px;
   height: 30px;
-  width: 100px;
+  width: 90px;
   margin-top: 20px;
   margin-left: 15px;
   border: 1px solid #810036;

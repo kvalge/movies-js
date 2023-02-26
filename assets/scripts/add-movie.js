@@ -35,6 +35,7 @@ const renderMovies = () => {
   <button id="delete-movie-btn">Delete</button>
 </div>
     `;
+    movieEl.addEventListener('click', deleteMovie.bind(null, movie.id));
     movieList.append(movieEl);
   });
 };
@@ -50,6 +51,7 @@ const addMovieHandler = () => {
   }
 
   const newMovie = {
+    id: Math.random().toString(),
     name,
     description,
     image,
@@ -79,3 +81,16 @@ toggleLink = () => {
 
 addMovieBtn.addEventListener('click', addMovieHandler);
 cancelMovieBtn.addEventListener('click', clearMovieInput);
+
+const deleteMovie = (movieId) => {
+  let movieIndex = 0;
+  for (const movie of movies) {
+    if (movie.id === movieId) {
+      break;
+    }
+    movieIndex++;
+  }
+  movies.splice(movieIndex, 1);
+  const movieList = document.getElementById('movie-list');
+  movieList.children[movieIndex].remove();
+};

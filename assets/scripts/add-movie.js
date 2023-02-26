@@ -2,9 +2,12 @@ const movies = [];
 
 const addMovieBtn = document.getElementById('add-movie-btn');
 const cancelMovieBtn = document.getElementById('cancel-movie-btn');
+const hide = document.getElementById('hide');
+const hideStyle = hide.style.display = 'none';
 
 const renderMovies = () => {
   const movieList = document.getElementById('movie-list');
+
   if (movies.length === 0) {
     movieList.classList.remove('visible');
     return;
@@ -50,6 +53,8 @@ const addMovieHandler = () => {
   renderMovies();
   clearMovieInput();
   toggleLink();
+  
+  hideStyle = hide.style.display = 'block'
 };
 
 const addMovie = document.getElementById('user-input');

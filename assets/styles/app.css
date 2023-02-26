@@ -79,6 +79,13 @@ button:hover {
   border-color: #9d2054;
 }
 
+
+#cancel-movie-btn{
+  background-color: rgb(227, 227, 234);
+  color: #810036;
+  border: rgb(238, 238, 241);
+}
+
 label {
   font-size: 15px;
   font-weight: bold;

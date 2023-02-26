@@ -35,10 +35,12 @@ const renderMovies = () => {
   <button id="delete-movie-btn">Delete</button>
 </div>
     `;
+    
     const deleteMovieBtn = movieEl.querySelector('button');
     deleteMovieBtn.style.fontWeight = '100';
     deleteMovieBtn.style.fontSize = '14px';
     deleteMovieBtn.addEventListener('click', deleteMovie.bind(null, movie.id));
+
     movieList.append(movieEl);
   });
 };

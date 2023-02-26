@@ -1,6 +1,7 @@
 const movies = [];
 
 const addMovieBtn = document.getElementById('add-movie-btn');
+const cancelMovieBtn = document.getElementById('cancel-movie-btn');
 
 const renderMovies = () => {
   const movieList = document.getElementById('movie-list');
@@ -54,8 +55,8 @@ const addMovieHandler = () => {
 const addMovie = document.getElementById('user-input');
 const userInputs = addMovie.querySelectorAll('input');
 clearMovieInput = () => {
-  for (const usrInput of userInputs) {
-    usrInput.value = '';
+  for (const userInput of userInputs) {
+    userInput.value = '';
   }
 };
 
@@ -65,3 +66,4 @@ toggleLink = () => {
 };
 
 addMovieBtn.addEventListener('click', addMovieHandler);
+cancelMovieBtn.addEventListener('click', clearMovieInput);

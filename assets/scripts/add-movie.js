@@ -35,7 +35,8 @@ const renderMovies = () => {
   <button id="delete-movie-btn">Delete</button>
 </div>
     `;
-    movieEl.addEventListener('click', deleteMovie.bind(null, movie.id));
+    const deleteMovieBtn = movieEl.querySelector('button');
+    deleteMovieBtn.addEventListener('click', deleteMovie.bind(null, movie.id));
     movieList.append(movieEl);
   });
 };
@@ -88,4 +89,3 @@ clearMovieInput = () => {
 
 addMovieBtn.addEventListener('click', addMovieHandler);
 cancelMovieBtn.addEventListener('click', clearMovieInput);
-

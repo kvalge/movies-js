@@ -9,6 +9,9 @@ hideCard.style.display = 'none';
 const getLinkEl = document.getElementById('link-el');
 getLinkEl.className = 'invisible';
 
+const addMovie = document.getElementById('user-input');
+const userInputs = addMovie.querySelectorAll('input');
+
 const deleteMovieConfirmation = document.getElementById('delete-confirmation');
 deleteMovieConfirmation.className = 'invisible'
 
@@ -69,12 +72,15 @@ const closeMovieDeletionCard = () => {
   deleteMovieConfirmation.className = 'invisible';
   getLinkEl.className = 'visible';
   hideCard.style.display = 'block';
+  addMovie.className = 'visible';
 };
 
 const startDeleteMovie = movieId => {
   deleteMovieConfirmation.className = 'visible';
   hideCard.style.display = 'none';
   getLinkEl.className = 'invisible';
+  addMovie.className = 'invisible';
+
 
   const cancelDeletionButton = deleteMovieConfirmation.querySelector('.btn--passive');
   let confirmDeletionButton = deleteMovieConfirmation.querySelector('.btn--danger');
@@ -116,9 +122,6 @@ const addMovieHandler = () => {
   getLinkEl.className = 'visible';
   hideCard.style.display = 'block';
 };
-
-const addMovie = document.getElementById('user-input');
-const userInputs = addMovie.querySelectorAll('input');
 
 const clearMovieInput = () => {
   for (const userInput of userInputs) {

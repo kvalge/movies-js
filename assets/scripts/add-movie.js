@@ -3,11 +3,11 @@ const cancelMovieBtn = document.getElementById('cancel-movie-btn');
 
 const movieList = document.getElementById('movie-list');
 
-const hideCard = document.getElementById('hide');
-hideCard.style.display = 'none';
-
 const getLinkEl = document.getElementById('link-el');
 getLinkEl.className = 'invisible';
+
+const hideCard = document.getElementById('hide');
+hideCard.style.display = 'none';
 
 const addMovie = document.getElementById('user-input');
 const userInputs = addMovie.querySelectorAll('input');
@@ -77,8 +77,8 @@ const closeMovieDeletionCard = () => {
 
 const startDeleteMovie = movieId => {
   deleteMovieConfirmation.className = 'visible';
-  hideCard.style.display = 'none';
   getLinkEl.className = 'invisible';
+  hideCard.style.display = 'none';
   addMovie.className = 'invisible';
 
 

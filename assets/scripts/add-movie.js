@@ -70,9 +70,9 @@ const deleteMovie = (movieId) => {
 
 const closeMovieDeletionCard = () => {
   deleteMovieConfirmation.className = 'invisible';
-  getLinkEl.className = 'visible';
+  getLinkEl.className = 'card';
   hideCard.style.display = 'block';
-  addMovie.className = 'visible';
+  addMovie.className = 'card';
 };
 
 const startDeleteMovie = movieId => {
@@ -119,7 +119,7 @@ const addMovieHandler = () => {
   renderMovies();
   clearMovieInput();
 
-  getLinkEl.className = 'visible';
+  getLinkEl.className = 'card';
   hideCard.style.display = 'block';
 };
 

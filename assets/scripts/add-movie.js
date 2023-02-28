@@ -17,6 +17,8 @@ deleteMovieConfirmation.className = 'invisible'
 
 const movies = [];
 
+//Makes the list of  movies visible after at least one movie is insterted.
+//Adds the delete movie button which on click runs startDeleteMovie function.
 const renderMovies = () => {
   if (movies.length === 0) {
     movieList.classList.remove('visible');
@@ -67,6 +69,8 @@ const deleteMovie = (movieId) => {
   closeMovieDeletionCard();
 };
 
+//Closes view on the delete confirmation view, displays the link to the first page of the best movies,
+//displays the list of inserted moives if there is any, displays the add movie view.
 const closeMovieDeletionCard = () => {
   deleteMovieConfirmation.className = 'invisible';
   getLinkEl.className = 'card';
@@ -74,6 +78,9 @@ const closeMovieDeletionCard = () => {
   addMovie.className = 'card';
 };
 
+
+//Displays deletion confirmation view, hides the link tot the first page, the list of inseerted movies and
+//the add movie form. Creates a choice to cancel or confirm deletion.
 const startDeleteMovie = movieId => {
   deleteMovieConfirmation.className = 'visible';
   getLinkEl.className = 'invisible';

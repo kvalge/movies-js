@@ -70,8 +70,8 @@ class MovieList {
 
   constructor() {}
 
-  //Renders the list of all movies when search filter is empty and displays one movie by a search text if 
-  //a search text is inserted and matches to some movie name.
+  //Renders the list of all movies when search filter is empty and displays one or more movies by a search text if 
+  //a search text is inserted and matches at least partially to some movie name.
   render() {
     const renderHook = document.getElementById('app');
     const movieList = document.createElement('ul');
@@ -111,7 +111,7 @@ const filteredMovie = document.getElementById('filtered-movie');
 const getlist = document.getElementById('app');
 
 
-//Renders the filtered movie by search text, hides the list of other movies, makes a button back to the whole list visible,
+//Renders the filtered movie(s) by search text, hides the list of other movies, makes a button back to the whole list visible,
 //clears input.
 const searchMovie = () => {
   const movie = movieList.render();

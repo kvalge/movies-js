@@ -70,7 +70,7 @@ class MovieList {
 
   constructor() {}
 
-  //Renders the list of all movies when search filter is empty and displays one or more movies by a search text if 
+  //Renders the list of all movies when the search filter is empty and displays one or more movies by a search text if 
   //a search text is inserted and matches at least partially to some movie name.
   render() {
     const renderHook = document.getElementById('app');
@@ -121,6 +121,7 @@ const searchMovie = () => {
   clearMovieInput();
 };
 
+//Makes the list of all movies visible, hides the filtered movie and the back to the list button.
 const backToList = () => {
   getlist.className = 'visible';
   filteredMovie.className = 'invisible';

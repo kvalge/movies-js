@@ -6,6 +6,7 @@ class Movie {
   }
 }
 
+//Creates a movie item class to create a html element for one movie item.
 class MovieItem {
   constructor(movie) {
     this.movie = movie;
@@ -69,6 +70,8 @@ class MovieList {
 
   constructor() {}
 
+  //Renders the list of all movies when search filter is empty and displays one movie by a search text if 
+  //a search text is inserted and matches to some movie name.
   render() {
     const renderHook = document.getElementById('app');
     const movieList = document.createElement('ul');
@@ -107,6 +110,9 @@ const searchButton = document.getElementById('button-filter');
 const filteredMovie = document.getElementById('filtered-movie');
 const getlist = document.getElementById('app');
 
+
+//Renders the filtered movie by search text, hides the list of other movies, makes a button back to the whole list visible,
+//clears input.
 const searchMovie = () => {
   const movie = movieList.render();
   filteredMovie.append(movie);

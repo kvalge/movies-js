@@ -92,33 +92,34 @@ class MovieList {
   }
 }
 
-const movieList = new MovieList();
 const getBackBtn = document.getElementById('button-back');
 getBackBtn.className = 'invisible';
+
+const movieList = new MovieList();
 movieList.render();
 
 const userInput = document.getElementById('filtered-title');
 const clearMovieInput = () => {
-    userInput.value = '';
+  userInput.value = '';
 };
 
 const searchButton = document.getElementById('button-filter');
+const filteredMovie = document.getElementById('filtered-movie');
+const getlist = document.getElementById('app');
 
 const searchMovie = () => {
-  const filteredMovie = document.getElementById('filtered-movie');
   const movie = movieList.render();
   filteredMovie.append(movie);
-  const getlist = document.getElementById('app');
   getlist.className = 'invisible';
   getBackBtn.className = 'visible';
   clearMovieInput();
 };
 
-searchButton.addEventListener('click', searchMovie);
-getBackBtn.addEventListener('click', function () {
-  const getlist = document.getElementById('app');
+const backToList = () => {
   getlist.className = 'visible';
-  const filteredMovie = document.getElementById('filtered-movie');
   filteredMovie.className = 'invisible';
   getBackBtn.className = 'invisible';
-});
+};
+
+searchButton.addEventListener('click', searchMovie);
+getBackBtn.addEventListener('click', backToList);

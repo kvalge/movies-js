@@ -45,7 +45,6 @@ const renderMovies = () => {
     const deleteMovieBtn = movieEl.querySelector('button');
     deleteMovieBtn.style.fontWeight = '100';
     deleteMovieBtn.style.fontSize = '14px';
-    // deleteMovieBtn.addEventListener('click', deleteMovie.bind(null, movie.id));
     deleteMovieBtn.addEventListener(
       'click',
       startDeleteMovie.bind(null, movie.id)

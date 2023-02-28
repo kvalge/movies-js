@@ -73,14 +73,36 @@ class MovieList {
     const renderHook = document.getElementById('app');
     const movieList = document.createElement('ul');
     movieList.className = 'movie-list';
-    for (const movie of this.movies) {
+
+    let filterTerm = document
+      .getElementById('filtered-title')
+      .value.toUpperCase();
+
+    const filteredMovies = !filterTerm
+      ? this.movies
+      : this.movies.filter((movie) => movie.name.includes(filterTerm));
+
+    for (const movie of filteredMovies) {
       const movieItem = new MovieItem(movie);
       const movieEl = movieItem.render();
       movieList.append(movieEl);
     }
     renderHook.append(movieList);
+    return movieList;
   }
 }
 
 const movieList = new MovieList();
 movieList.render();
+
+const searchButton = document.getElementById('button-filter');
+
+const searchMovie = () => {
+  const filteredMovie = document.getElementById('filtered-movie');
+  const movie = movieList.render();
+  filteredMovie.append(movie);
+  const getlist = document.getElementById('app');
+  getlist.className = 'invisible';
+};
+
+searchButton.addEventListener('click', searchMovie);
